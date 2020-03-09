@@ -30,10 +30,10 @@ if(OSTINSTALLED!=TRUE){
 }
 
 # Encrypt/Decrypt secret key - randomly generated during installation.
-define('SECRET_SALT','pW364DFnBSit0mf9XMuDS8Z8F0bmSnrD');
+define('SECRET_SALT','9Uwc75BJJ3zsXjlHjQgIcBZUGGp7wBSV');
 
 #Default admin email. Used only on db connection issues and related alerts.
-define('ADMIN_EMAIL','teste1@gmail.com');
+define('ADMIN_EMAIL','ti.prefeitura.araquari@gmail.com');
 
 # Database Options
 # ---------------------------------------------------
@@ -42,7 +42,7 @@ define('DBTYPE','mysql');
 define('DBHOST','localhost');
 define('DBNAME','test1');
 define('DBUSER','admin');
-define('DBPASS','admin');
+define('DBPASS','A_info15');
 
 # Table prefix
 define('TABLE_PREFIX','ost_');
