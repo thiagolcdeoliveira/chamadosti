@@ -22,129 +22,123 @@ require(CLIENTINC_DIR.'header.inc.php');
 ?>
 
 
-<div class="ui text container">
+<div class="ui text container banner">
     <h1 class="ui inverted header">
-        Imagine-a-Company
+        <!-- Imagine-a-Company -->
     </h1>
-    <h2>Do whatever you want when you want to.</h2>
-    <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
-</div>
+    <h2>Bem-vindos ao Sistema de Gestão de Chamados da TI da Prefeitura Municipal de Araquari</h2>
+    <!-- <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div> -->
+
+    <?php include CLIENTINC_DIR.'templates/sidebar1.tmpl.php'; ?>
 
 </div>
 
-<div class="ui vertical stripe segment">
+</div>
+
+<!-- <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
         <div class="row">
             <div class="eight wide column">
 
-            <?php  if($cfg && ($page = $cfg->getLandingPage())) echo $page->getBodyWithImages();
-                            else
-                                echo  '<h1>'.__('Welcome to the Support Center').'</h1>';
-           ?>
 
 
-              
-                <h3 class="ui header">We Help Companies and Companions</h3>
-                <p>We can give your company superpowers to do things that they never thought possible. Let us delight
-                    your customers and empower your needs...through pure data analytics.</p>
-                <h3 class="ui header">We Make Bananas That Can Dance</h3>
-                <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
+
+
             </div>
-            <div class="six wide right floated column">
+            <!-- <div class="six wide right floated column">
                 <!-- <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image"> -->
                 <!-- <div class="thread-body"> -->
-                   
-                </div>
+                <?php // include CLIENTINC_DIR.'templates/sidebar.tmpl.php'; ?>
+
+            <!-- </div>  -->
             <!-- </div> -->
             <!-- <div class="clear"></div>
 
-            <div> -->  <div id="landing_page">
-                    <?php include CLIENTINC_DIR.'templates/sidebar.tmpl.php'; ?>
-                    <div class="main-content">
-                        <?php if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
-                        <div class="search-form">
-                            <form method="get" action="kb/faq.php">
-                                <input type="hidden" name="a" value="search" />
-                                <input type="text" name="q" class="search"
-                                    placeholder="<?php echo __('Search our knowledge base'); ?>" />
-                                <button type="submit" class="green button"><?php echo __('Search'); ?></button>
-                            </form>
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
-                        <?php if($cfg && $cfg->isKnowledgebaseEnabled()){ 
-                            //FIXME: provide ability to feature or select random FAQs ?? ?>
-                        <!-- <br /><br /> -->
-                        <?php $cats = Category::getFeatured();
-                            if ($cats->all()) { ?>
-                        <h1><?php echo __('Featured Knowledge Base Articles'); ?></h1>
-                        <?php
-                        }
-                        foreach ($cats as $C) { ?>
-                        <div class="featured-category front-page">
-                            <i class="icon-folder-open icon-2x"></i>
-                            <div class="category-name">
-                                <?php echo $C->getName(); ?>
-                            </div>
-                            <?php foreach ($C->getTopArticles() as $F) { ?>
-                            <div class="article-headline">
-                                <div class="article-title"><a href="<?php echo ROOT_PATH;
-                                    ?>kb/faq.php?id=<?php echo $F->getId(); ?>"><?php
-                                        echo $F->getQuestion(); ?></a></div>
-                                <div class="article-teaser"><?php echo $F->getTeaser(); ?></div>
-                            </div>
-                            <?php } ?>
-                        </div>
-                        <?php
-                            }
-                         }
-                        ?>
-            </div>
-        </div>
-        <div class="row">
+            <div> -->
+        <!-- </div> -->
+        <!-- <div class="row">
             <div class="center aligned column">
                 <a class="ui huge button">Check Them Out</a>
             </div>
-        </div>
-    </div>
-</div>
+        </div> -->
+    <!-- </div> -->
+<!-- </div>  -->
 
 
 <div class="ui vertical stripe quote segment">
     <div class="ui equal width stackable internally celled grid">
         <div class="center aligned row">
-            <div class="column">
-                <h3>"What a Company"</h3>
-                <p>That is what they all say about us</p>
-            </div>
-            <div class="column">
-                <h3>"I shouldn't have gone with their competitor."</h3>
-                <p>
-                    <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme
-                    Toys
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+            <div class="twelve wide column centered ">
+                <div class="thread-body">
 
-<div class="ui vertical stripe segment">
-    <div class="ui text container">
-        <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-        <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing
-            by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth
-            your attention.</p>
-        <a class="ui large button">Read More</a>
-        <h4 class="ui horizontal header divider">
-            <a href="#">Case Studies</a>
-        </h4>
-        <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-        <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true.
-            It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-        <a class="ui large button">I'm Still Quite Interested</a>
+                    <?php
+                        if($cfg && ($page = $cfg->getLandingPage()))
+                            echo $page->getBodyWithImages();
+                        else
+                            echo  '<h1>'.__('Welcome to the Support Center').'</h1>';
+                        ?>
+                </div>
+            </div>
+
+
+            <!-- Editar aqui -->
+            <div id="landing_page">
+
+                <div class="main-content">
+                    <?php if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
+                    <div class="search-form">
+                        <form method="get" action="kb/faq.php">
+                            <input type="hidden" name="a" value="search" />
+                            <input type="text" name="q" class="search"
+                                placeholder="<?php echo __('Search our knowledge base'); ?>" />
+                            <button type="submit" class="green button"><?php echo __('Search'); ?></button>
+                        </form>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php if($cfg && $cfg->isKnowledgebaseEnabled()){ 
+                           //FIXME: provide ability to feature or select random FAQs ?? ?>
+            <!-- <br /><br /> -->
+            <?php $cats = Category::getFeatured();
+                           if ($cats->all()) { ?>
+            <h1><?php echo __('Featured Knowledge Base Articles'); ?></h1>
+            <?php
+                       }
+                       foreach ($cats as $C) { ?>
+            <div class="featured-category front-page">
+                <i class="icon-folder-open icon-2x"></i>
+                <div class="category-name">
+                    <?php echo $C->getName(); ?>
+                </div>
+                <?php foreach ($C->getTopArticles() as $F) { ?>
+                <div class="article-headline">
+                    <div class="article-title"><a href="<?php echo ROOT_PATH;
+                                   ?>kb/faq.php?id=<?php echo $F->getId(); ?>"><?php
+                                       echo $F->getQuestion(); ?></a></div>
+                    <div class="article-teaser"><?php echo $F->getTeaser(); ?></div>
+                </div>
+                <?php } ?>
+            </div>
+            <?php
+                           }
+                        }
+                       ?>
+        <!-- </div>
+    </div>
+        <h3>"What a Company"</h3>
+        <p>That is what they all say about us</p> -->
+    <!-- </div> -->
+    <!-- <div class="column">
+        <h3>"I shouldn't have gone with their competitor."</h3>
+        <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme
+            Toys
+        </p> -->
     </div>
 </div>
+<!-- </div>
+</div> -->
 
 
 <div class="ui inverted vertical footer segment">
@@ -196,4 +190,4 @@ require(CLIENTINC_DIR.'header.inc.php');
 
 
 
-<?php require(CLIENTINC_DIR.'footer.inc.php'); ?>
+<?php #require(CLIENTINC_DIR.'footer.inc.php'); ?>

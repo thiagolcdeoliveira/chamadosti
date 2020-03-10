@@ -2,6 +2,9 @@
     .hidden.menu {
       display: none;
     }
+    .banner{
+      /* background-image:  url("../file.php?key=pyphxb-wzneknsdkm7fw1mu98v54hnbg&expires=1583884800&signature=aa12e332e54281bc8ed7c17926db9268f2c7a72f&disposition=inline&id=16"); */
+    }
 .logo{
   /* margin-left: -10%; */
 }
