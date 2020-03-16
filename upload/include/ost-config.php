@@ -40,8 +40,8 @@ define('ADMIN_EMAIL','ti.prefeitura.araquari@gmail.com');
 # Mysql Login info
 define('DBTYPE','mysql');
 define('DBHOST','localhost');
-define('DBNAME','test1');
-define('DBUSER','admin');
+define('DBNAME','osticket');
+define('DBUSER','administrador');
 define('DBPASS','A_info15');
 
 # Table prefix
