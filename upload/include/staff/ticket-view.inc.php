@@ -64,6 +64,8 @@ if($ticket->isOverdue())
     $warn.='&nbsp;&nbsp;<span class="Icon overdueTicket">'.__('Marked overdue!').'</span>';
 
 ?>
+<script src="css/semanticui/jquery.min.js"></script>
+
 <div>
     <div id="msg_notice" style="display: none;"><span id="msg-txt"><?php echo $msg ?: ''; ?></span></div>
     <div class="sticky bar">
@@ -158,6 +160,18 @@ if($ticket->isOverdue())
             } ?>
             <div id="action-dropdown-more" class="action-dropdown anchor-right">
               <ul>
+             
+                 <?php
+                  //gerar qrcode
+                    //if ($role->hasPerm(Ticket::PERM_EDIT)) { ?>
+                    <li><a class="" 
+                    href="../include/staff/gerarqrcode.php?id=<?php
+                    echo $ticket->getId(); ?>"
+                    onclick="
+                    geraqrcode(<?php
+                    echo $ticket->getId(); ?>)"                  
+                    ><i class="icon qrcode code"></i> <?php
+                    echo __(' QRCode'); ?></a></li>
                 <?php
                  if ($role->hasPerm(Ticket::PERM_EDIT)) { ?>
                     <li><a class="change-user" href="#tickets/<?php
@@ -1308,6 +1322,10 @@ if ($errors['err'] && isset($_POST['a'])) {
     </form>
     <div class="clear"></div>
 </div>
+
+
+
+
 <script type="text/javascript">
 $(function() {
     $(document).on('click', 'a.change-user', function(e) {
@@ -1423,5 +1441,24 @@ function saveDraft() {
     redactor = $('#response').redactor('plugin.draft');
     if (redactor.opts.draftId)
         $('#response').redactor('plugin.draft.saveDraft');
+}
+
+function geraqrcode(id) {
+
+    alert("oi");
+
+    $.ajax({
+        url: "../include/staff/gerarqrcode.php",
+        type: "GET",
+        data: {'id':id},
+        success: function(result) {
+            $body.removeClass("loading");
+            alert(result);
+        }
+    });
+    // jQuery(window).load(function() {
+    //         //Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+    //         //jQuery("#loader").delay(2000).fadeOut("slow");
+    //     });
 }
 </script>

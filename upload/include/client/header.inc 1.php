@@ -64,10 +64,14 @@ if ($lang) {
         <link rel="stylesheet" type="text/css" href="css/semanticui/semantic.css">
         <link rel="stylesheet" type="text/css" href="css/base.css">
 
-        <script src="css/semanticui/assets/library/jquery.min.js"></script>
+        <script src="css/semanticui/jquery.min.js"></script>
         <script src="css/semanticui/components/visibility.js"></script>
         <script src="css/semanticui/components/sidebar.js"></script>
         <script src="css/semanticui/components/transition.js"></script>
+        <script src="css/semanticui/semanticui.js"></script>
+        <script src="css/semanticui/semantic.js"></script>
+        <script src="css/semanticui/semantic.js"></script>
+        <script src="js/base.js"></script>
 
 
 
@@ -295,4 +299,5 @@ if ($lang) {
                 }
             } ?>
                             </div>
+                            <div>
                         </div>

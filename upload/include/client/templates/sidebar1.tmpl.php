@@ -21,4 +21,5 @@ $BUTTONS = isset($BUTTONS) ? $BUTTONS : true;
     <div class="ui huge inverted primary button">
         <a href="view.php"><?php  echo ('Check Ticket Status');?></a> 
     </p>
+    </div>
 <?php } ?>

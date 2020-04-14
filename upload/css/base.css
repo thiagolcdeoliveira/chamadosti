@@ -8,6 +8,12 @@
 .logo{
   /* margin-left: -10%; */
 }
+    body{
+      overflow-x: unset !important;
+    }
+    .main-content{
+      width: 100%;
+    }
     .masthead.segment {
       min-height: 700px;
       padding: 1em 0em;
